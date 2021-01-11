@@ -1,0 +1,45 @@
+.footer {
+  background-color: $color-grey-light-2;
+  border-top: 2px solid $color-grey-light;
+
+  &__content {
+    width: $grid-width;
+    margin: 0 auto;
+    height: 16.8rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__copy-right {
+    font-size: $default-font-size;
+    color: $color-grey-dark-3;
+    margin-top: 1.6rem;
+  }
+
+  &__policy-link {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      color: $color-grey-dark-3;
+    }
+
+    &:not(:first-child) {
+      margin-left: 5rem;
+    }
+  }
+
+  &__policy-email {
+    &:link,
+    &:visited {
+      font-size: $default-font-size;
+      color: $color-link;
+    }
+
+    &:not(:first-child) {
+      margin-left: 5rem;
+    }
+  }
+
+}
