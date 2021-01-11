@@ -1,1 +1,28 @@
-<header>Header</header>
+<header class="header">
+    <div class="header__content">
+
+        <div class="header__logo">
+            <img src="{{asset "images/header/logo.svg"}}" alt="Logo" class="header__logo-image">
+        </div>
+
+        {{#if @site.navigation}}
+            <nav class="navigation">
+                {{#foreach @site.navigation}}
+                    {{#link href=url class="navigation__nav-item" activeClass="navigation__nav-item--active"}}
+                        <span class="nav-text">{{label}}</span>
+                    {{/link}}
+                {{/foreach}}
+            </nav>
+        {{/if}}
+
+        <a href="#" class="login-btn">
+            <img src="{{asset "images/header/login.svg"}}" alt="Login button image" class="login-btn__image">
+            <span class="login-text">Вход</span>
+        </a>
+
+        <a href="#" class="btn">
+            <img src="{{asset "images/logo2.svg"}}" alt="Logo button" />
+        </a>
+
+    </div>
+</header>

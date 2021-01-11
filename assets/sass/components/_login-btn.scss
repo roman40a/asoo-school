@@ -1,0 +1,13 @@
+.login-btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__image {
+    margin-right: 1.4rem;
+  }
+}

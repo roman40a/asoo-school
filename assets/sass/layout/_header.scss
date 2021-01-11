@@ -1,0 +1,16 @@
+.header {
+  background-color: $color-white;
+  border-bottom: 2px solid $color-grey-light;
+
+  &__content {
+    width: $grid-width;
+    margin: 0 auto;
+    height: 8.8rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+}

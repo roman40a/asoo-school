@@ -4,3 +4,28 @@ body {
   line-height: 1;
   color: $color-grey-dark;
 }
+
+.nav-text {
+  font-weight: 600;
+  font-size: $default-font-size;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color-grey-dark-2;
+}
+
+.login-text {
+  font-size: $default-font-size;
+  padding: 0 2px;
+  position: relative;
+  color: $color-grey-dark;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -2px;
+    right: -2px;
+    height: 2px;
+    background-color: $color-grey-dark-3;
+  }
+}
