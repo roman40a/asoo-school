@@ -1,0 +1,36 @@
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+
+  & > li {
+    margin-bottom: 1.5rem;
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+  }
+
+  &__tag {
+    color: $color-grey-dark;
+
+    &:visited,
+    &:link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: .7rem 1.2rem;
+    }
+
+    &--active {
+      color: $color-white;
+    }
+  }
+
+  &__tag-text {
+    font-size: $default-font-size;
+    margin-left: .8rem;
+    white-space: nowrap;
+  }
+}

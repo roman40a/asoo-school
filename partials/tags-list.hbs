@@ -1,0 +1,20 @@
+{{#get "tags" limit="all" order="name asc"}}
+    {{#if tags}}
+        <ul class="tags-list">
+            {{#foreach tags}}
+                <li data-color={{accent_color}} data-slug={{slug}} data-url={{url}}>
+                    {{#link href=url class="tags-list__tag" activeClass="tags-list__tag--active"}}
+                        {{> tag color=accent_color}}
+                        <span class="tags-list__tag-text">{{name}}</span>
+                    {{/link}}
+                </li>
+            {{/foreach}}
+        </ul>
+    {{/if}}
+{{/get}}
+<script>
+    const currentLi = document.querySelector(`li[data-url*="${window.location.pathname}"]`);
+    const color = currentLi.dataset.color;
+    currentLi.style.backgroundColor = color;
+    currentLi.querySelector('.tags-list__image path').style.fill = '#fff';
+</script>
