@@ -12,25 +12,28 @@
     }
   }
 
-  &__tag {
-    color: $color-grey-dark;
-
-    &:visited,
-    &:link {
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      padding: .7rem 1.2rem;
-    }
-
+  .tag {
     &--active {
       color: $color-white;
     }
   }
+}
 
-  &__tag-text {
+.tag {
+  color: $color-grey-dark;
+
+  &:visited,
+  &:link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: .7rem 1.2rem;
+  }
+
+  &__text {
     font-size: $default-font-size;
     margin-left: .8rem;
     white-space: nowrap;
+    color: inherit;
   }
 }

@@ -1,0 +1,17 @@
+<div class="featured-card">
+    <div class="featured-card__image-wrapper">
+        <img class="featured-card__image" src="{{feature_image}}" />
+    </div>
+    <h3 class="heading-three u-margin-top-big">{{title}}</h3>
+    <p class="featured-card__overview  u-margin-top-medium">
+        {{excerpt}}
+    </p>
+    <div class="featured-card__footer u-margin-top-medium-2">
+        {{#primary_author}}
+            {{> "author-block" date=published_at}}
+        {{/primary_author}}
+        {{#primary_tag}}
+            {{> "tag"}}
+        {{/primary_tag}}
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.author-block {
+
+  display: flex;
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: orangered;
+  }
+
+  &__text {
+
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: $color-black;
+  }
+
+  &__date {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: $color-grey-dark-3;
+  }
+
+}

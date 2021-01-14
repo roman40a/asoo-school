@@ -3,10 +3,7 @@
         <ul class="tags-list">
             {{#foreach tags}}
                 <li data-color={{accent_color}} data-slug={{slug}} data-url={{url}}>
-                    {{#link href=url class="tags-list__tag" activeClass="tags-list__tag--active"}}
-                        {{> tag color=accent_color}}
-                        <span class="tags-list__tag-text">{{name}}</span>
-                    {{/link}}
+                    {{> tag}}
                 </li>
             {{/foreach}}
         </ul>
@@ -16,5 +13,5 @@
     const currentLi = document.querySelector(`li[data-url*="${window.location.pathname}"]`);
     const color = currentLi.dataset.color;
     currentLi.style.backgroundColor = color;
-    currentLi.querySelector('.tags-list__image path').style.fill = '#fff';
+    currentLi.querySelector('.tag__image path').style.fill = '#fff';
 </script>

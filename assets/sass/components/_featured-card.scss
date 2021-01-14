@@ -1,0 +1,28 @@
+.featured-card {
+  padding: 1.6rem;
+  background-color: $color-white;
+
+  &__image-wrapper {
+    width: 100%;
+    height: 36.8rem;
+    background-color: orangered;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__overview {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+}
