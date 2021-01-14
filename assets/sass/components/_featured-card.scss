@@ -1,6 +1,12 @@
 .featured-card {
   padding: 1.6rem;
   background-color: $color-white;
+  display: block;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
 
   &__image-wrapper {
     width: 100%;
@@ -17,6 +23,7 @@
   &__overview {
     font-size: 1.8rem;
     line-height: 3.2rem;
+    color: $color-grey-dark;
   }
 
   &__footer {

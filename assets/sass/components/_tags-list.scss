@@ -11,12 +11,10 @@
       margin-right: 5rem;
     }
   }
+}
 
-  .tag {
-    &--active {
-      color: $color-white;
-    }
-  }
+.tag--active .tag__text {
+  color: $color-white;
 }
 
 .tag {

@@ -3,7 +3,9 @@
         <ul class="tags-list">
             {{#foreach tags}}
                 <li data-color={{accent_color}} data-slug={{slug}} data-url={{url}}>
+                {{#link href=url class="tag" activeClass="tag--active"}}
                     {{> tag}}
+                {{/link}}
                 </li>
             {{/foreach}}
         </ul>

@@ -15,7 +15,14 @@
                 {{/get}}
             </div>
             <div class="col-1-of-3">
-
+                <h4 class="heading-four u-margin-bottom-medium">Popular articles</h4>
+                <div class="section-featured__featured-list">
+                    {{#get "posts" limit="all" filter="featured:true"}}
+                        {{#foreach posts}}
+                            {{> "featured-card-search"}}
+                        {{/foreach}}
+                    {{/get}}
+                </div>
             </div>
         </div>
     </div>
