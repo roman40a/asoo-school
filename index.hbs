@@ -18,7 +18,7 @@
                 <h4 class="heading-four u-margin-bottom-medium">Popular articles</h4>
                 <div class="section-featured__featured-list">
                     {{#get "posts" limit="all" filter="featured:true"}}
-                        {{#foreach posts}}
+                        {{#foreach posts from=2}}
                             {{> "featured-card-search"}}
                         {{/foreach}}
                     {{/get}}
@@ -28,15 +28,20 @@
     </section>
 
     <section class="section-post-list">
-        {{#get "posts" limit="all" filter="featured:false" include="tags,authors"}}
-            {{#foreach posts columns=3}}
-                {{#if @rowStart}}<div class="row">{{/if}}
-                    <div class="col-1-of-3">
-                        {{> "post-card"}}
-                    </div>
-                {{#if @rowEnd}}</div>{{/if}}
-            {{/foreach}}
-        {{/get}}
+        {{#foreach posts columns=3}}
+            {{#if @rowStart}}<div class="row">{{/if}}
+            <div class="col-1-of-3">
+                {{> "post-card"}}
+            </div>
+            {{#if @rowEnd}}
+                </div>
+            {{else if @last}}
+                </div>
+            {{/if}}
+        {{/foreach}}
+        <div class="row">
+            {{pagination}}
+        </div>
     </section>
 
 </section>

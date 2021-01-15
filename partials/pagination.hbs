@@ -1,0 +1,59 @@
+<nav class="pagination" role="navigation">
+    {{#if prev}}
+        <a class="pagination__prev-post" href="{{page_url prev}}">
+            <img class="pagination__prev-icon" src="{{asset "images/pagination/prev-arrow.svg"}}" />
+            Previous
+        </a>
+    {{else}}
+        <div class="pagination__prev-post">
+            <img class="pagination__prev-icon" src={{asset "images/pagination/prev-arrow.svg"}} />
+            Previous
+        </div>
+    {{/if}}
+    <div class="pagination__page-number-list">
+<!--        <a href="#" class="pagination__page-number pagination__page-number--active">-->
+<!--            <span>1</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="pagination__page-number">-->
+<!--            <span>2</span>-->
+<!--        </a>-->
+    </div>
+    {{#if next}}
+        <a class="pagination__next-post" href="{{page_url next}}">
+            Next
+            <img class="pagination__next-icon" src="{{asset "images/pagination/next-arrow.svg"}}" />
+        </a>
+    {{else}}
+        <div class="pagination__next-post">
+            Next
+            <img class="pagination__next-icon" src="{{asset "images/pagination/next-arrow.svg"}}" />
+        </div>
+    {{/if}}
+</nav>
+
+<script>
+    const getPageNumber = (page, currentPage) => {
+        const pageNumber = document.createElement('a');
+        pageNumber.className = `pagination__page-number${currentPage === page ? ' pagination__page-number--active' : ''}`;
+        pageNumber.href = `{{page_url}}page/${page}`;
+        pageNumber.innerHTML = `<span>${page}</span>`;
+        return pageNumber;
+    };
+
+    const getDots = () => {
+        const dots = document.createElement('div');
+        dots.className = 'pagination__page-number';
+        dots.innerHTML = '<span>...</span>';
+        return dots;
+    };
+
+    const pageNumberList = document.querySelector('.pagination__page-number-list');
+    const currentPage = parseInt("{{page}}");
+    const totalPages = parseInt("{{pages}}");
+
+    const arrOfPages = (new Array(totalPages)).fill(null).map((_, index) => index + 1);
+    arrOfPages.forEach(page => {
+        const pageNumber = getPageNumber(page, currentPage);
+        pageNumberList.append(pageNumber);
+    });
+</script>
