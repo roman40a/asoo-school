@@ -1,0 +1,7 @@
+<nav class="navigation">
+    {{#foreach navigation}}
+        <a href={{url absolute="true"}} class="navigation__nav-item{{#if current}} navigation__nav-item--active{{/if}}">
+            <span class="nav-text">{{label}}</span>
+        </a>
+    {{/foreach}}
+</nav>
