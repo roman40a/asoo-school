@@ -12,8 +12,10 @@
     {{/if}}
 {{/get}}
 <script>
-    const currentLi = document.querySelector(`li[data-url*="${window.location.pathname}"]`);
-    const color = currentLi.dataset.color;
-    currentLi.style.backgroundColor = color;
-    currentLi.querySelector('.tag__image path').style.fill = '#fff';
+    if (window.location.pathname !== '/') {
+        const currentLi = document.querySelector(`li[data-url*="${window.location.pathname}"]`);
+        const color = currentLi.dataset.color;
+        currentLi.style.backgroundColor = color;
+        currentLi.querySelector('.tag__image path').style.fill = '#fff';
+    }
 </script>
