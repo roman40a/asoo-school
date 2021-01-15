@@ -1,0 +1,17 @@
+<a href="{{url}}" class="post-card">
+    <div class="post-card__image-wrapper">
+        <img class="post-card__image" src="{{feature_image}}" />
+    </div>
+    <h4 class="heading-four u-margin-top-huge">{{title}}</h4>
+    <p class="post-card__overview  u-margin-top-medium-3">
+        {{excerpt}}
+    </p>
+    <div class="post-card__footer u-margin-top-medium">
+        {{#primary_author}}
+            {{> "author-block" date=published_at}}
+        {{/primary_author}}
+        {{#primary_tag}}
+            {{> "tag"}}
+        {{/primary_tag}}
+    </div>
+</a>

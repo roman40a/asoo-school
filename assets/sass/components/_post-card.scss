@@ -1,4 +1,4 @@
-.featured-card {
+.post-card {
   padding: 1.6rem;
   background-color: $color-white;
   display: block;
@@ -11,7 +11,7 @@
 
   &__image-wrapper {
     width: 100%;
-    height: 36.8rem;
+    height: 16.6rem;
     background-color: orangered;
   }
 
@@ -22,9 +22,11 @@
   }
 
   &__overview {
-    font-size: 1.8rem;
-    line-height: 3.2rem;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
     color: $color-grey-dark;
+    height: 13rem;
+    overflow: hidden;
   }
 
   &__footer {
@@ -33,4 +35,8 @@
     align-items: flex-end;
   }
 
+}
+
+.post-card .heading-four {
+  color: $color-grey-dark-2;
 }

@@ -1,7 +1,7 @@
 {{!< default}}
 
 <section class="section-featured">
-    <div class="section-featured__content">
+    <section class="section-featured__content">
         <div class="row">
             {{> "tags-list"}}
         </div>
@@ -25,5 +25,18 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="section-post-list">
+        {{#get "posts" limit="all" filter="featured:false" include="tags,authors"}}
+            {{#foreach posts columns=3}}
+                {{#if @rowStart}}<div class="row">{{/if}}
+                    <div class="col-1-of-3">
+                        {{> "post-card"}}
+                    </div>
+                {{#if @rowEnd}}</div>{{/if}}
+            {{/foreach}}
+        {{/get}}
+    </section>
+
 </section>
